@@ -48,7 +48,10 @@ void slidingWindow(){
 
 
 }
-
+void varSizeSlidingWindow(){
+    int x;
+    
+}
 int main(){
     // prefix sum query 
     // refrences in cpp are like when we pass the var as it is and then in function we use '&' in front of the passed var to use it as the refrence var
