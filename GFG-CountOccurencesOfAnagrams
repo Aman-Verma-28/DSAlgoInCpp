@@ -1,0 +1,26 @@
+from collections import Counter
+class Solution:
+	def search(self,txt, pat):
+	    d = Counter(txt)
+        d1 = {}
+        i = 0
+        count = 0
+        n = len(pat)
+        m = len(txt)
+        left = 0
+        while i < n:
+            while i - left < m:
+                if pat[i] in d1:
+                    d1[pat[i]] += 1
+                else:
+                    d1[pat[i]] = 1
+                i += 1
+    
+            if d1 == d:
+                count += 1
+    
+            d1[pat[left]] -= 1
+            if d1[pat[left]]==0:
+                del d1[pat[left]]
+            left += 1
+        return (count)
