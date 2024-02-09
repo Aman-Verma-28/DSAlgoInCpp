@@ -15,8 +15,7 @@ def solve():
     n=int(input())
     l=list(map(int,input().split()))
     l.sort()
-    diff=l[-1]-l[0]
-    if diff==0:
+    if (diff := l[-1]-l[0])==0:
         print(0,n*(n-1)//2)
         return
     i=0

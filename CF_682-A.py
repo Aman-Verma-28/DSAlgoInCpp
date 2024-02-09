@@ -16,8 +16,7 @@ def solve():
 
     count=0
     for i in range(1,n+1):
-        x=5-i%5
-        if x==5:
+        if (x := 5-i%5)==5:
             x=0
         count+=d[x]
     print(count)

@@ -37,8 +37,7 @@ def solution():
     n=inpn()
     l=inpl()
     d=Counter(l)
-    n1=len(d)
-    if n1==1:
+    if (n1 := len(d))==1:
         outn(0)
         endl()
         return
